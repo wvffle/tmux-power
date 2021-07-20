@@ -34,52 +34,23 @@ prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
 time_format=$(tmux_get @tmux_power_time_format '%T')
 date_format=$(tmux_get @tmux_power_date_format '%F')
 # short for Theme-Colour
-TC=$(tmux_get '@tmux_power_theme' 'gold')
-case $TC in
-    'gold' )
-        TC='#ffb86c'
-        ;;
-    'redwine' )
-        TC='#b34a47'
-        ;;
-    'moon' )
-        TC='#00abab'
-        ;;
-    'forest' )
-        TC='#228b22'
-        ;;
-    'violet' )
-        TC='#9370db'
-        ;;
-    'snow' )
-        TC='#fffafa'
-        ;;
-    'coral' )
-        TC='#ff7f50'
-        ;;
-    'sky' )
-        TC='#87ceeb'
-        ;;
-    'default' ) # Useful when your term changes colour dynamically (e.g. pywal)
-        TC='colour3'
-        ;;
-esac
+TC='#E6B450'
 
-G01=#080808 #232
-G02=#121212 #233
-G03=#1c1c1c #234
-G04=#262626 #235
-G05=#303030 #236
-G06=#3a3a3a #237
-G07=#444444 #238
-G08=#4e4e4e #239
-G09=#585858 #240
-G10=#626262 #241
-G11=#6c6c6c #242
-G12=#767676 #243
+G01=#0a0e14 #0a0e14
+G02=#0a0e14 #0a0e14
+G03=#0a0e14 #0a0e14
+G04=#0a0e14 #0a0e14
+G05=#0a0e14 #0a0e14
+G06=#4d5566 #237
+G07=#4d5566 #238
+G08=#b3b1ad #239
+G09=#b3b1ad #240
+G10=#b3b1ad #b3b1ad
+G11=#b3b1ad #b3b1ad
+G12=#b3b1ad #b3b1ad
 
-FG="$G10"
-BG="$G04"
+FG="#b3b1ad"
+BG="#0a0e14"
 
 # Status options
 tmux_set status-interval 1
@@ -104,7 +75,7 @@ tmux_set status-left-bg "$G04"
 tmux_set status-left-fg "G12"
 tmux_set status-left-length 150
 user=$(whoami)
-LS="#[fg=$G04,bg=$TC,bold] $user_icon $user@#h #[fg=$TC,bg=$G06,nobold]$right_arrow_icon#[fg=$TC,bg=$G06] $session_icon #S "
+LS="#[fg=$G04,bg=$TC,bold] $user@#h #[fg=$TC,bg=$G06,nobold]$right_arrow_icon#[fg=$TC,bg=$G06] $session_icon #S "
 if "$show_upload_speed"; then
     LS="$LS#[fg=$G06,bg=$G05]$right_arrow_icon#[fg=$TC,bg=$G05] $upload_speed_icon #{upload_speed} #[fg=$G05,bg=$BG]$right_arrow_icon"
 else
