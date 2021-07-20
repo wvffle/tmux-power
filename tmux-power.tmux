@@ -104,7 +104,7 @@ tmux_set status-right "$RS"
 
 # Window status
 tmux_set window-status-format " #I "
-tmux_set window-status-current-format "#[fg=$BG,bg=$TC]$right_arrow_icon#[bold] #I #[fg=$TC,bg=$BG,nobold]$right_arrow_icon"
+tmux_set window-status-current-format "#[fg=$TC,bg=$BG]$left_arrow_icon#[fg=$BG,bg=$TC,bold] #I #[fg=$TC,bg=$BG,nobold]$right_arrow_icon"
 
 # Window separator
 tmux_set window-status-separator ""
